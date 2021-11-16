@@ -1,10 +1,10 @@
-import { ICategoriesRepository } from "../repositories/ICategoriesRepository";
+import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
 interface IRepository {
   name: string;
   description: string;
 }
-class CreateCategoryService {
+class CreateCategoryUseCases {
   constructor(private categoriesRepository: ICategoriesRepository) {}
 
   execute({ name, description }: IRepository) {
@@ -19,4 +19,4 @@ class CreateCategoryService {
   }
 }
 
-export { CreateCategoryService };
+export { CreateCategoryUseCases };
