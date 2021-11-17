@@ -1,4 +1,4 @@
-import { SpecificationRepository } from "../repositories/SpecificationsRepository";
+import { SpecificationRepository } from "../repositories/implementations/SpecificationsRepository";
 
 interface IRepository {
   name: string;
