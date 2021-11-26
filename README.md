@@ -3,14 +3,14 @@
 
 ##Technologies
 
-[NodeJS][nodejs]
-[Express][express]
-[Typescript][typescript]
-[Multer][multer]
-[Swagger][swagger]
-[Docker][docker]
-[Docker-Compose][docker-compose]
-[Postgresql][postgresql]
+- [NodeJS][nodejs]
+- [Express][express]
+- [Typescript][typescript]
+- [Multer][multer]
+- [Swagger][swagger]
+- [Docker][docker]
+- [Docker-Compose][docker-compose]
+- [Postgresql][postgresql]
 
 
 
