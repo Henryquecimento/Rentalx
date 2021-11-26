@@ -1,0 +1,7 @@
+{
+  "type": "postres",
+  "host": "localhost",
+  "username": "",
+  "password": "",
+  "database": "rentalx"
+}
