@@ -77,6 +77,52 @@
           }
         }
       }
+    },
+    "/specifications": {
+      "post": {
+        "tags": [
+          "Specification"
+        ],
+        "summary": "Create a vehicle specification",
+        "description": "Create a new vehicle specification",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "$ref": "#/definitions/Specification"
+                },
+                "example": {
+                  "name": "Create a name exemple",
+                  "description": "Create a description exemple"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Specification already exists"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Specification": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
     }
   }
 }
