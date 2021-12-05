@@ -1,7 +1,7 @@
 <h1 align="center">Rentalx</h1>
 
 
-##Technologies
+## TECHNOLOGIES
 
 - [NodeJS][nodejs]
 - [Express][express]
@@ -12,6 +12,24 @@
 - [Docker-Compose][docker-compose]
 - [Postgresql][postgresql]
 
+**:rocket: HOW TO ACCESS**
+
+> COPYING FROM GITHUB:
+
+```bash
+$ git clone https://github.com/Henryquecimento/Rentalx.git
+```
+
+> INSTALLING NECESSARY DEPENDENCIES:
+
+```bash
+yarn
+```
+> Initiate docker:
+
+```bash
+docker-compose start
+```
 
 
 [nodejs]: https://nodejs.org/en/
