@@ -19,7 +19,7 @@ class CreateUsersController {
 
       return response.status(201).send();
     } catch (error) {
-      return response.json(500).json({ error: "Users already exists" });
+      return response.status(500).json({ error: "User already exists" });
     }
   }
 }
