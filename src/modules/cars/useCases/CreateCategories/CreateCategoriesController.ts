@@ -7,17 +7,11 @@ class CreateCategoriesController {
   async handle(request: Request, response: Response): Promise<Response> {
     const { name, description } = request.body;
 
-    try {
-      const createCategoriesUseCases = container.resolve(
-        CreateCategoryUseCases
-      );
+    const createCategoriesUseCases = container.resolve(CreateCategoryUseCases);
 
-      await createCategoriesUseCases.execute({ name, description });
+    await createCategoriesUseCases.execute({ name, description });
 
-      return response.status(201).send();
-    } catch (error) {
-      return response.status(400).json({ error: "Category already exists!" });
-    }
+    return response.status(201).send();
   }
 }
 

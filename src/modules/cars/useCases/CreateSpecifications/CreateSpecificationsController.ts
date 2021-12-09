@@ -7,19 +7,13 @@ class CreateSpecificationsController {
   async handle(request: Request, response: Response): Promise<Response> {
     const { name, description } = request.body;
 
-    try {
-      const createSpecificationsUseCases = container.resolve(
-        CreateSpecificationsUseCases
-      );
+    const createSpecificationsUseCases = container.resolve(
+      CreateSpecificationsUseCases
+    );
 
-      await createSpecificationsUseCases.execute({ name, description });
+    await createSpecificationsUseCases.execute({ name, description });
 
-      return response.status(201).send();
-    } catch (error) {
-      return response
-        .status(500)
-        .json({ error: "Specification already exists" });
-    }
+    return response.status(201).send();
   }
 }
 
