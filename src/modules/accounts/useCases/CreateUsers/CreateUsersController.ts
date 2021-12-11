@@ -1,15 +1,15 @@
 import { Request, Response } from "express";
 import { container } from "tsyringe";
 
-import { CreateUsersUseCases } from "./CreateUsersUseCases";
+import { CreateUsersUseCase } from "./CreateUsersUseCase";
 
 class CreateUsersController {
   async handle(request: Request, response: Response): Promise<Response> {
     const { name, email, password, driver_license } = request.body;
 
-    const createUsersUseCases = container.resolve(CreateUsersUseCases);
+    const createUsersUseCase = container.resolve(CreateUsersUseCase);
 
-    await createUsersUseCases.execute({
+    await createUsersUseCase.execute({
       name,
       email,
       password,

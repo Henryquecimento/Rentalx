@@ -8,7 +8,7 @@ interface IRepository {
   description: string;
 }
 @injectable()
-class CreateCategoryUseCases {
+class CreateCategoryUseCase {
   constructor(
     @inject("CategoriesRepository")
     private categoriesRepository: ICategoriesRepository
@@ -29,4 +29,4 @@ class CreateCategoryUseCases {
   }
 }
 
-export { CreateCategoryUseCases };
+export { CreateCategoryUseCase };

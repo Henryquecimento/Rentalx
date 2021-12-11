@@ -9,7 +9,7 @@ interface IImportCategory {
   description: string;
 }
 @injectable()
-class ImportCategoriesUseCases {
+class ImportCategoriesUseCase {
   constructor(
     @inject("CategoriesRepository")
     private categoriesRepository: CategoriesRepository
@@ -60,4 +60,4 @@ class ImportCategoriesUseCases {
   }
 }
 
-export { ImportCategoriesUseCases };
+export { ImportCategoriesUseCase };

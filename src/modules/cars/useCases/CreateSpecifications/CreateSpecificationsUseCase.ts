@@ -8,7 +8,7 @@ interface IRepository {
   description: string;
 }
 @injectable()
-class CreateSpecificationsUseCases {
+class CreateSpecificationsUseCase {
   constructor(
     @inject("SpecificationRepository")
     private specificationsRepository: ISpacificationRepository
@@ -28,4 +28,4 @@ class CreateSpecificationsUseCases {
   }
 }
 
-export { CreateSpecificationsUseCases };
+export { CreateSpecificationsUseCase };
