@@ -31,6 +31,8 @@ yarn
 docker-compose start
 ```
 
+##:gear: PROJECT IN DEVELOPMENT
+
 
 [nodejs]: https://nodejs.org/en/
 [express]: https://expressjs.com/pt-br/
