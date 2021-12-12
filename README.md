@@ -31,7 +31,7 @@ yarn
 docker-compose start
 ```
 
-##:gear: PROJECT IN DEVELOPMENT
+## :gear: PROJECT IN DEVELOPMENT
 
 
 [nodejs]: https://nodejs.org/en/
