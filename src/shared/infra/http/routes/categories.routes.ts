@@ -1,9 +1,9 @@
 import { Router } from "express";
 import multer from "multer";
 
-import { CreateCategoriesController } from "../modules/cars/useCases/CreateCategories/CreateCategoriesController";
-import { ImportCategoriesController } from "../modules/cars/useCases/ImportCategories/ImportCategoriesController";
-import { ListCategoriesController } from "../modules/cars/useCases/ListCategories/ListCategoriesController";
+import { CreateCategoriesController } from "@modules/cars/useCases/CreateCategories/CreateCategoriesController";
+import { ImportCategoriesController } from "@modules/cars/useCases/ImportCategories/ImportCategoriesController";
+import { ListCategoriesController } from "@modules/cars/useCases/ListCategories/ListCategoriesController";
 
 const CategoriesRoutes = Router();
 

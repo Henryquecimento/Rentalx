@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import { CreateSpecificationsController } from "../modules/cars/useCases/CreateSpecifications/CreateSpecificationsController";
+import { CreateSpecificationsController } from "@modules/cars/useCases/CreateSpecifications/CreateSpecificationsController";
 
 const SpecificationsRoutes = Router();
 
