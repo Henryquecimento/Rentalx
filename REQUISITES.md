@@ -28,13 +28,11 @@
 **Requisito Funcional**
 
 - Deve ser possível cadastrar uma especificação para um carro.[x]
-- Deve ser possível listar todas as especificações.
-- Deve ser possível listar todos os carros.
 
 **Regra de negócio**
 
-- Não deve ser possível cadastrar uma especificação para um carro não cadastrado.
-- Não deve ser possível cadastrar uma especificação já existente para o mesmo carro.
+- Não deve ser possível cadastrar uma especificação para um carro não cadastrado.[x]
+- Não deve ser possível cadastrar uma especificação já existente para o mesmo carro.[x]
 - O usuário responsável pelo cadastro deve ser um administrador.
 
 # Cadastro de imagens do carro
