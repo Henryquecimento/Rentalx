@@ -7,7 +7,7 @@ import {
 
 import { Specification } from "../entities/Specification";
 
-class SpecificationRepository implements ISpecificationRepository {
+class SpecificationsRepository implements ISpecificationRepository {
   private repository: Repository<Specification>;
 
   constructor() {
@@ -34,9 +34,11 @@ class SpecificationRepository implements ISpecificationRepository {
     return specification;
   }
 
-  findById(ids: string[]): Promise<Specification[]> {
-    throw new Error("Method not implemented.");
+  async findById(ids: string[]): Promise<Specification[]> {
+    const specifications = await this.repository.findByIds(ids);
+
+    return specifications;
   }
 }
 
-export { SpecificationRepository };
+export { SpecificationsRepository };
