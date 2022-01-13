@@ -33,14 +33,13 @@
 
 - Não deve ser possível cadastrar uma especificação para um carro não cadastrado.[x]
 - Não deve ser possível cadastrar uma especificação já existente para o mesmo carro.[x]
-- O usuário responsável pelo cadastro deve ser um administrador.
+- O usuário responsável pelo cadastro deve ser um administrador.[x]
 
 # Cadastro de imagens do carro
 
 **Requisito Funcional**
 
 - Deve ser possível cadastrar a imagem do carro.
-- Deve ser possível listar todos os carros.
 
 **Requisito Não Funcional**
 
