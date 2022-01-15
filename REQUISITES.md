@@ -39,16 +39,16 @@
 
 **Requisito Funcional**
 
-- Deve ser possível cadastrar a imagem do carro.
+- Deve ser possível cadastrar a imagem do carro.[x]
 
 **Requisito Não Funcional**
 
-- Utilizar o multer para upload dos arquivos
+- Utilizar o multer para upload dos arquivos.[x]
 
 **Regra de negócio**
 
-- O usuário deve poder cadastrar mais de uma imagem para o mesmo carro.
-- O usuário responsável pelo cadastro deve ser um administrador.
+- O usuário deve poder cadastrar mais de uma imagem para o mesmo carro.[x]
+- O usuário responsável pelo cadastro deve ser um administrador.[x]
 
 # Aluguel de carro
 
