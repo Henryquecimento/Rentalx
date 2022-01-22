@@ -1,39 +1,21 @@
-import {
-  Column,
-  CreateDateColumn,
-  Entity,
-  JoinColumn,
-  OneToOne,
-  PrimaryColumn,
-} from "typeorm";
+import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
 import { v4 as uuid } from "uuid";
-
-import { User } from "@modules/accounts/infra/typeorm/entities/User";
-import { Car } from "@modules/cars/infra/typeorm/entities/Car";
 
 @Entity("rentals")
 class Rental {
   @PrimaryColumn()
   id: string;
 
-  @OneToOne(() => Car)
-  @JoinColumn({ name: "car_id" })
-  car: Car;
-
   @Column()
   car_id: string;
-
-  @OneToOne(() => Car)
-  @JoinColumn({ name: "user_id" })
-  user: User;
 
   @Column()
   user_id: string;
 
-  @CreateDateColumn()
+  @Column()
   start_date: Date;
 
-  @CreateDateColumn()
+  @Column()
   end_date: Date;
 
   @CreateDateColumn()
