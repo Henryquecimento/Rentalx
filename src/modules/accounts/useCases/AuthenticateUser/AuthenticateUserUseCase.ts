@@ -3,8 +3,8 @@ import { sign } from "jsonwebtoken";
 import { inject, injectable } from "tsyringe";
 
 import Auth from "@config/Auth";
-import { UsersTokensRepository } from "@modules/accounts/infra/typeorm/repositories/UsersTokensRepository";
 import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepository";
+import { IUsersTokensRepository } from "@modules/accounts/repositories/IUsersTokensRepository";
 import { IDateProvider } from "@shared/containers/providers/DateProvider/IDateProvider";
 import { AppError } from "@shared/errors/AppError";
 
@@ -28,7 +28,7 @@ class AuthenticateUserUseCase {
     @inject("UsersRepository")
     private usersRepository: IUsersRepository,
     @inject("UsersTokensRepository")
-    private usersTokensRepository: UsersTokensRepository,
+    private usersTokensRepository: IUsersTokensRepository,
     @inject("DayjsDateProvider")
     private dateProvider: IDateProvider
   ) {}
