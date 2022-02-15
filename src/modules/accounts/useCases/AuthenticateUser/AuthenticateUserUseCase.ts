@@ -44,13 +44,13 @@ class AuthenticateUserUseCase {
     } = Auth;
 
     if (!user) {
-      throw new AppError("Email or password is incorrect!", 400);
+      throw new AppError("Email or password is incorrect!");
     }
 
     const passwordMatch = await compare(password, user.password);
 
     if (!passwordMatch) {
-      throw new AppError("Email or password is incorrect!", 400);
+      throw new AppError("Email or password is incorrect!");
     }
 
     const token = sign({}, secret_token, {

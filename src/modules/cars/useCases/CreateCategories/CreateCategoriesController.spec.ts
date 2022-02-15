@@ -6,8 +6,9 @@ import { v4 as uuid } from "uuid";
 import { app } from "@shared/infra/http/app";
 import createConnection from "@shared/infra/typeorm";
 
+let connection: Connection;
+
 describe("Create Category Controller", () => {
-  let connection: Connection;
   beforeAll(async () => {
     connection = await createConnection();
     await connection.runMigrations();
@@ -31,7 +32,7 @@ describe("Create Category Controller", () => {
       password: "admin",
     });
 
-    const { token } = responseSession.body;
+    const { refresh_token } = responseSession.body;
 
     const response = await request(app)
       .post("/categories")
@@ -39,9 +40,7 @@ describe("Create Category Controller", () => {
         name: "Category Supertest",
         description: "Category Supertest",
       })
-      .set({
-        Authorization: `Bearer ${token}`,
-      });
+      .set("Authorization", `Bearer ${refresh_token}`);
 
     expect(response.status).toBe(201);
   });
@@ -52,7 +51,7 @@ describe("Create Category Controller", () => {
       password: "admin",
     });
 
-    const { token } = responseSession.body;
+    const { refresh_token } = responseSession.body;
 
     const response = await request(app)
       .post("/categories")
@@ -60,9 +59,7 @@ describe("Create Category Controller", () => {
         name: "Category Supertest",
         description: "Category Supertest",
       })
-      .set({
-        Authorization: `Bearer ${token}`,
-      });
+      .set("Authorization", `Bearer ${refresh_token}`);
 
     expect(response.status).toBe(400);
   });
